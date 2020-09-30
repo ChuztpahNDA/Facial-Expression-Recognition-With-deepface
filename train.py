@@ -3,13 +3,15 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, AveragePooling2D
 from tensorflow.keras.layers import Dense, Activation, Dropout, Flatten
 from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.metrics import SparseCategoricalAccuracy
-from tensorflow.keras.losses import SparseCategoricalCrossentropy
 import numpy as np
+import tensorflow as tf
 
 from tensorflow.keras.utils import to_categorical
+
+# config = tf.ConfigProto(device_count={'GPU': 0, 'CPU': 56})
+# sess = tf.Session(config=config)
+# tensorflow.keras.backend.set_session(sess)
 
 
 def reshape_df(df):
